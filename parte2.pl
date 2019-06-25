@@ -1,41 +1,406 @@
-peixes(Y):- salmao(Y);tubarao(Y).				% Se X é um salmão, então ele é peixe
-canario(piupiu).								% Porque não consigo isso
-morcego(vamp).									% vamp é um morcego
-avestruz(xica).									% xica é um avestruz
-vaca(mimosa).									% mimosa é uma vaca
-salmao(alfred).									% alfred é um salmão
-tubarao(tutu).									% tutu é um tubarão
-peixes(nemo).									% nemo é um peixe
-passaros(X):-canario(X);avestruz(X).			% Se X é canário, então ele é um passaro
-mamiferos(X):-morcego(X).						% um morcego é um mamífero
-%passaros(X):-avestruz(X).						% Se X é um avestruz, então X é um passaro
-mamiferos(X):-vaca(X).							% Se X é uma vaca, então X é um maífero
-%peixes(X):-									% porque essa linha da erro %voar(-X),anda(X)
-animal(X):- peixes(X);mamiferos(X);passaros(X). % Se X é peixe,,mamifero ou passaro,X é um animal
-pele(X):-animal(X).								% Se X é um animal, então X tem pele
-voar(-X):- avestruz(X).							% Se o passaro for um avestruz, entao ele não voa
-voar(X) :- passaros(X).							% Se X é passaro, então X pode voar
-asas(X) :- passaros(X).							% Se X é passaro, então X possui asas
-nadar(X):- peixes(X).							% Se X é um peixe, então X possui consegue nadar
-nadadeiras(X):- peixes(X).						% Se X é um peixe, então X possui nadadeiras
-/* TODO: Testar... */
-%ovos(-X):- tubarao(X).							% Se X é tubarão, então ele náo põe ovos
-/* -------------- */
-ovos(X):- passaros(X);peixes(X);tubarao(X).		% Se X é um passaro ou um peixe, então X põe ovos
+peixes(Y):- salmao(Y);tubarao(Y).               %Se X � um salm�o, ent�o ele � peixe%
+peixes(nemo).                                   %nemo � um peixes
+canario(piupiu).                                %Porque n�o consigo isso%
+morcego(vamp).                                  %vamp � um morcego%
+avestruz(xica).                                 %xica � um avestruz%
+vaca(mimosa).                                   %mimosa � uma vaca%
+salmao(alfred).                                 %alfred � um salm�o%
+tubarao(tutu).                                  %tutu � um tubar�o%
+passaros(X):-canario(X);avestruz(X).            %Se X � can�rio, ent�o ele � um passaro%
+mamiferos(X):-morcego(X).                       %um morcego � um mam�fero%
+%passaros(X):-avestruz(X).                      %Se X � um avestruz, ent�o X � um passaro%
+mamiferos(X):-vaca(X).                          %Se X � uma vaca, ent�o X � um ma�fero %
+%peixes(X):-                                    %porque essa linha da erro% voar(-X),anda(X).
+animal(X):- peixes(X);mamiferos(X);passaros(X). %Se X � peixe,,mamifero ou passaro,X � um animal%
+pele(X):-animal(X).                             %Se X � um animal, ent�o X tem pele%
+voar(-X):- avestruz(X).                         %Se o passaro for um avestruz, entao ele n�o voa%
+voar(X) :- passaros(X).                         %Se X � passaro, ent�o X pode voar%
+asas(X) :- passaros(X).                         %Se X � passaro, ent�o X possui asas%
+nadar(X):- peixes(X).                           %Se X � um peixe, ent�o X possui consegue nadar%
+nadadeiras(X):- peixes(X).                      %Se X � um peixe, ent�o X possui nadadeiras%
+%ovos(-X):- tubarao(X).                         %Se X � tubar�o, ent�o ele n�o p�e ovos ****TESTAR***%
+ovos(X):- passaros(X);peixes(X);tubarao(X).     %Se X � um passaro ou um peixe, ent�o X p�e ovos%
 anda(-X):- morcego(X).
-anda(X):- mamiferos(X).							% Se X é um mamífero, então ele anda
-grande(X):- avestruz(X).						% Se o passaro for um avestruz, ele é grande
-%voar(-X):- avestruz(X).						% Se o passaro for um avestruz, entao ele não voa
+anda(X):- mamiferos(X).                         %Se X � um mam�fero, ent�o ele anda%
+grande(X):- avestruz(X).                        %Se o passaro for um avestruz, ele � grande%
+%voar(-X):- avestruz(X).                        %Se o passaro for um avestruz, entao ele n�o voa
 
-/* TODO: Corrigir esse erros abaixo */
+filhotesformados(X) :- tubarao(X).              %Filhotes de tubar�o nascem formados%salm�o(alfred).
+delicia(X):- salmao(X).                         %Se X � um salm�o e � uma del�cia%
+amarelo(X):-canario(X).                         %Se X � can�rio, ent�o ele � amarelo%
+cor(X,amarelo):-canario(X).                     %Se X � can�rio, ent�o ele � amarelo%
+leite(X):-vaca(X).                              %Se X � uma vaca, ent�o X d� leite %
+carne(X):-vaca(X).                              %Se X � uma vaca, ent�o X d� carne%
 
-filhotesformados(X) :- tubarao(X).				% Filhotes de tubarão nascem formados %salmão(alfred).
-delicia(X):- salmao(X).							% Se X é um salmão e é uma delícia
-amarelo(X):-canario(X).							% Se X é canário, então ele é amarelo
-leite(X):-vaca(X).								% Se X é uma vaca, então X dá leite
-carne(X):-vaca(X).								% Se X é uma vaca, então X dá carne
+%para fazer nega��o, so colocar o simbolo de m
 
-/* para fazer negação, e so colocar o simbolo de m */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
