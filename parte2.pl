@@ -11,7 +11,7 @@ mamiferos(X):-morcego(X).						% um morcego é um mamífero
 %passaros(X):-avestruz(X).						% Se X é um avestruz, então X é um passaro
 mamiferos(X):-vaca(X).							% Se X é uma vaca, então X é um maífero
 %peixes(X):-									% porque essa linha da erro %voar(-X),anda(X)
-animal(X):- peixes(X);mamiferos(X);passaros(X). % Se X é peixe,,mamifero ou passaro,X é um animal
+animal(X):- peixes(X);mamiferos(X);passaros(X).	% Se X é peixe,,mamifero ou passaro,X é um animal
 pele(X):-animal(X).								% Se X é um animal, então X tem pele
 voar(-X):- avestruz(X).							% Se o passaro for um avestruz, entao ele não voa
 voar(X) :- passaros(X).							% Se X é passaro, então X pode voar
