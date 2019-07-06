@@ -5,7 +5,8 @@ avestruz(xica).									% xica é um avestruz
 vaca(mimosa).									% mimosa é uma vaca
 salmao(alfred).									% alfred é um salmão
 tubarao(tutu).									% tutu é um tubarão
-peixes(nemo).									% nemo é um peixe
+peixe(nemo).									% nemo é um peixe
+
 passaros(X):-canario(X);avestruz(X).			% Se X é canário, então ele é um passaro
 mamiferos(X):-morcego(X).						% um morcego é um mamífero
 %passaros(X):-avestruz(X).						% Se X é um avestruz, então X é um passaro
