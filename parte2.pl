@@ -30,7 +30,8 @@ grande(X):- avestruz(X).                        % Se o passaro for um avestruz, 
 
 /* TODO: Corrigir esse erros abaixo */
 
-filhotesformados(X) :- tubarao(X).              % Filhotes de tubarão nascem formados.                         %salmão(alfred).
+filhotesformados(X) :- tubarao(X).              % Filhotes de tubarão nascem formados.
+%salmão(alfred).
 delicia(X):- salmao(X).                         % Se X é um salmão e é uma delícia
 amarelo(X):-canario(X).                         % Se X é canário, então ele é amarelo
 leite(X):-vaca(X).                              % Se X é uma vaca, então X dá leite
